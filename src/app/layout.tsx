@@ -16,6 +16,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://aladdin-portfolio.netlify.app"),
   title: {
     default: "Aladdin Mohamed Al-Haddad - Frontend Developer",
     template: "%s | Aladdin Mohamed Al-Haddad",

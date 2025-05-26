@@ -131,16 +131,45 @@ The design uses a Yemen-inspired color palette:
 
 ## 🌐 Deployment
 
-### Vercel (Recommended)
+### Netlify (Recommended)
 
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Deploy automatically on every push
+The project is optimized for Netlify deployment with automatic configuration:
+
+1. **Quick Deploy**
+
+   ```bash
+   # Run the deployment script
+   ./scripts/deploy.sh
+
+   # Or build manually
+   npm run build
+   ```
+
+2. **Git Integration**
+
+   ```bash
+   git add .
+   git commit -m "feat: prepare for deployment"
+   git push origin main
+   ```
+
+   Then connect your repository to Netlify for automatic deployments.
+
+3. **Manual Deploy**
+   - Build the project: `npm run build`
+   - Drag the `out` folder to Netlify dashboard
+
+### Configuration Files
+
+- `netlify.toml` - Netlify build settings and redirects
+- `next.config.ts` - Next.js static export configuration
+- `DEPLOYMENT.md` - Comprehensive deployment guide
 
 ### Other Platforms
 
-- **Netlify**: Drag and drop the `dist` folder
+- **Vercel**: Push to GitHub and connect repository
 - **GitHub Pages**: Use GitHub Actions for deployment
+- **AWS S3**: Upload the `out` folder to S3 bucket
 
 ## 📝 Customization
 
