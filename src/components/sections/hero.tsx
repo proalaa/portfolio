@@ -115,9 +115,9 @@ export function Hero() {
       >
         <div className="max-w-5xl mx-auto">
           {/* Greeting with enhanced animation */}
-          <motion.div variants={itemVariants} className="mb-8">
+          <motion.div variants={itemVariants} className="mb-4">
             <motion.p
-              className="text-xl sm:text-2xl text-neutral-600 dark:text-neutral-400 font-light tracking-wide"
+              className="text-lg sm:text-xl text-neutral-600 dark:text-neutral-400 font-light tracking-wide"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
@@ -131,8 +131,8 @@ export function Hero() {
           </motion.div>
 
           {/* Name with stunning animations */}
-          <motion.div variants={nameVariants} className="mb-8">
-            <motion.h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold leading-tight">
+          <motion.div variants={nameVariants} className="mb-6">
+            <motion.h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
               {/* First name with letter animation */}
               <motion.div
                 className="block mb-2"
@@ -144,10 +144,15 @@ export function Hero() {
                   <motion.span
                     key={index}
                     variants={letterVariants}
-                    className="inline-block bg-gradient-to-r from-primary-600 via-secondary-600 to-accent-600 bg-clip-text text-transparent"
+                    className="inline-block text-neutral-900 dark:text-neutral-100"
                     style={{
-                      backgroundSize: "200% 200%",
-                      animation: "gradient-shift 3s ease-in-out infinite",
+                      background:
+                        "linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4, #10b981)",
+                      backgroundSize: "300% 300%",
+                      animation: "gradient-shift 4s ease-in-out infinite",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      backgroundClip: "text",
                     }}
                   >
                     {letter === " " ? "\u00A0" : letter}
@@ -170,8 +175,8 @@ export function Hero() {
           </motion.div>
 
           {/* Dynamic Role with enhanced typewriter */}
-          <motion.div variants={itemVariants} className="mb-10">
-            <div className="text-2xl sm:text-3xl lg:text-4xl text-neutral-700 dark:text-neutral-300 h-16 flex items-center justify-center">
+          <motion.div variants={itemVariants} className="mb-6">
+            <div className="text-xl sm:text-2xl lg:text-3xl text-neutral-700 dark:text-neutral-300 h-12 flex items-center justify-center">
               <motion.span
                 className="font-mono relative"
                 initial={{ opacity: 0 }}
@@ -191,9 +196,9 @@ export function Hero() {
           </motion.div>
 
           {/* Description with slide-in effect */}
-          <motion.div variants={itemVariants} className="mb-12">
+          <motion.div variants={itemVariants} className="mb-8">
             <motion.p
-              className="text-lg sm:text-xl text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto leading-relaxed"
+              className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.8, duration: 0.8 }}
@@ -235,7 +240,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 2.2, duration: 0.8 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20"
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
           >
             <motion.div
               whileHover={{ scale: 1.05, y: -2 }}
