@@ -48,147 +48,330 @@ export function Hero() {
     }
   };
 
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.6, -0.05, 0.01, 0.99],
+      },
+    },
+  };
+
+  const nameVariants = {
+    hidden: { opacity: 0, scale: 0.8, y: 50 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: {
+        duration: 1.2,
+        ease: [0.6, -0.05, 0.01, 0.99],
+        delay: 0.3,
+      },
+    },
+  };
+
+  const letterVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
     >
       <AnimatedBackground />
 
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-white/70 to-white/90 dark:from-neutral-950/90 dark:via-neutral-950/70 dark:to-neutral-950/90" />
+      {/* Enhanced gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/80 to-white/95 dark:from-neutral-950/95 dark:via-neutral-950/80 dark:to-neutral-950/95" />
 
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto"
-        >
-          {/* Greeting */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-lg sm:text-xl text-neutral-600 dark:text-neutral-400 mb-4"
-          >
-            مرحباً، أنا • Hello, I&apos;m
-          </motion.p>
-
-          {/* Name */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6"
-          >
-            <span className="bg-gradient-to-r from-primary-600 via-secondary-600 to-accent-600 bg-clip-text text-transparent">
-              Aladdin Mohamed
-            </span>
-            <br />
-            <span className="text-neutral-900 dark:text-neutral-100">
-              Al-Haddad
-            </span>
-          </motion.h1>
-
-          {/* Dynamic Role */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-            className="text-xl sm:text-2xl lg:text-3xl text-neutral-700 dark:text-neutral-300 mb-8 h-12 flex items-center justify-center"
-          >
-            <span className="font-mono">
-              {displayedText}
-              <span className="animate-blink border-r-2 border-primary-600 ml-1" />
-            </span>
-          </motion.div>
-
-          {/* Description */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.6 }}
-            className="text-lg sm:text-xl text-neutral-600 dark:text-neutral-400 mb-12 max-w-2xl mx-auto leading-relaxed"
-          >
-            A passionate frontend developer from Yemen, crafting beautiful and
-            functional web experiences at{" "}
-            <span className="text-primary-600 dark:text-primary-400 font-semibold">
-              Zid
-            </span>
-            . I love turning ideas into reality through code.
-          </motion.p>
-
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
-          >
-            <Button
-              size="lg"
-              onClick={() => scrollToSection("projects")}
-              className="group relative overflow-hidden"
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center"
+      >
+        <div className="max-w-5xl mx-auto">
+          {/* Greeting with enhanced animation */}
+          <motion.div variants={itemVariants} className="mb-8">
+            <motion.p
+              className="text-xl sm:text-2xl text-neutral-600 dark:text-neutral-400 font-light tracking-wide"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
             >
-              <span className="relative z-10 flex items-center gap-2">
-                View My Work
-                <motion.div
-                  animate={{ x: [0, 5, 0] }}
-                  transition={{ repeat: Infinity, duration: 1.5 }}
-                >
-                  →
-                </motion.div>
+              <span className="inline-block" style={{ direction: "rtl" }}>
+                مرحباً، أنا
               </span>
-            </Button>
-
-            <Button
-              variant="outline"
-              size="lg"
-              onClick={() => scrollToSection("contact")}
-              className="group"
-            >
-              <MessageCircle className="w-4 h-4 mr-2 group-hover:animate-bounce" />
-              Get In Touch
-            </Button>
-
-            <Button variant="ghost" size="lg" className="group">
-              <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
-              Download CV
-            </Button>
+              <span className="mx-4 text-primary-500">•</span>
+              <span className="inline-block">Hello, I&apos;m</span>
+            </motion.p>
           </motion.div>
 
-          {/* Scroll Indicator */}
+          {/* Name with stunning animations */}
+          <motion.div variants={nameVariants} className="mb-8">
+            <motion.h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold leading-tight">
+              {/* First name with letter animation */}
+              <motion.div
+                className="block mb-2"
+                initial="hidden"
+                animate="visible"
+                transition={{ staggerChildren: 0.1, delayChildren: 0.5 }}
+              >
+                {"Aladdin Mohamed".split("").map((letter, index) => (
+                  <motion.span
+                    key={index}
+                    variants={letterVariants}
+                    className="inline-block bg-gradient-to-r from-primary-600 via-secondary-600 to-accent-600 bg-clip-text text-transparent"
+                    style={{
+                      backgroundSize: "200% 200%",
+                      animation: "gradient-shift 3s ease-in-out infinite",
+                    }}
+                  >
+                    {letter === " " ? "\u00A0" : letter}
+                  </motion.span>
+                ))}
+              </motion.div>
+
+              {/* Last name with different animation */}
+              <motion.div
+                className="block"
+                initial={{ opacity: 0, rotateX: -90 }}
+                animate={{ opacity: 1, rotateX: 0 }}
+                transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
+              >
+                <span className="text-neutral-900 dark:text-neutral-100 tracking-tight">
+                  Al-Haddad
+                </span>
+              </motion.div>
+            </motion.h1>
+          </motion.div>
+
+          {/* Dynamic Role with enhanced typewriter */}
+          <motion.div variants={itemVariants} className="mb-10">
+            <div className="text-2xl sm:text-3xl lg:text-4xl text-neutral-700 dark:text-neutral-300 h-16 flex items-center justify-center">
+              <motion.span
+                className="font-mono relative"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.5 }}
+              >
+                <span className="relative">
+                  {displayedText}
+                  <motion.span
+                    className="absolute -right-1 top-0 w-0.5 h-full bg-primary-600"
+                    animate={{ opacity: [1, 0, 1] }}
+                    transition={{ repeat: Infinity, duration: 1 }}
+                  />
+                </span>
+              </motion.span>
+            </div>
+          </motion.div>
+
+          {/* Description with slide-in effect */}
+          <motion.div variants={itemVariants} className="mb-12">
+            <motion.p
+              className="text-lg sm:text-xl text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.8, duration: 0.8 }}
+            >
+              A passionate frontend developer from{" "}
+              <motion.span
+                className="text-primary-600 dark:text-primary-400 font-semibold relative"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                Yemen
+                <motion.div
+                  className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary-600 dark:bg-primary-400"
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ delay: 2.2, duration: 0.6 }}
+                />
+              </motion.span>
+              , crafting beautiful and functional web experiences at{" "}
+              <motion.span
+                className="text-secondary-600 dark:text-secondary-400 font-semibold relative"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                Zid
+                <motion.div
+                  className="absolute -bottom-1 left-0 w-full h-0.5 bg-secondary-600 dark:bg-secondary-400"
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ delay: 2.4, duration: 0.6 }}
+                />
+              </motion.span>
+              . I love turning ideas into reality through code.
+            </motion.p>
+          </motion.div>
+
+          {/* CTA Buttons with stagger animation */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.5, duration: 0.6 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 2.2, duration: 0.8 }}
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20"
+          >
+            <motion.div
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <Button
+                size="lg"
+                onClick={() => scrollToSection("projects")}
+                className="group relative overflow-hidden px-8 py-4 text-lg font-semibold"
+              >
+                <motion.span className="relative z-10 flex items-center gap-3">
+                  View My Work
+                  <motion.div
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ repeat: Infinity, duration: 1.5 }}
+                    className="text-xl"
+                  >
+                    →
+                  </motion.div>
+                </motion.span>
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-primary-700 to-secondary-700"
+                  initial={{ x: "-100%" }}
+                  whileHover={{ x: 0 }}
+                  transition={{ duration: 0.3 }}
+                />
+              </Button>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => scrollToSection("contact")}
+                className="group px-8 py-4 text-lg font-semibold border-2"
+              >
+                <MessageCircle className="w-5 h-5 mr-3 group-hover:animate-bounce" />
+                Get In Touch
+              </Button>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <Button
+                variant="ghost"
+                size="lg"
+                className="group px-8 py-4 text-lg font-semibold"
+              >
+                <Download className="w-5 h-5 mr-3 group-hover:animate-bounce" />
+                Download CV
+              </Button>
+            </motion.div>
+          </motion.div>
+
+          {/* Enhanced Scroll Indicator */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 2.8, duration: 0.8 }}
             className="flex flex-col items-center"
           >
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-2">
+            <motion.p
+              className="text-sm text-neutral-500 dark:text-neutral-400 mb-4 font-medium tracking-wide"
+              animate={{ opacity: [0.5, 1, 0.5] }}
+              transition={{ repeat: Infinity, duration: 2 }}
+            >
               Scroll to explore
-            </p>
+            </motion.p>
             <motion.button
               onClick={() => scrollToSection("about")}
-              animate={{ y: [0, 10, 0] }}
-              transition={{ repeat: Infinity, duration: 2 }}
-              className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
+              className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors p-2 rounded-full hover:bg-primary-50 dark:hover:bg-primary-950"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
             >
-              <ChevronDown className="w-6 h-6" />
+              <motion.div
+                animate={{ y: [0, 8, 0] }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 2,
+                  ease: "easeInOut",
+                }}
+              >
+                <ChevronDown className="w-6 h-6" />
+              </motion.div>
             </motion.button>
           </motion.div>
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
 
-      {/* Decorative elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-primary-200 dark:bg-primary-800 rounded-full opacity-20 animate-float" />
-      <div
-        className="absolute bottom-20 right-10 w-16 h-16 bg-secondary-200 dark:bg-secondary-800 rounded-full opacity-20 animate-float"
-        style={{ animationDelay: "1s" }}
+      {/* Enhanced decorative elements */}
+      <motion.div
+        className="absolute top-32 left-10 w-24 h-24 bg-primary-200 dark:bg-primary-800 rounded-full opacity-30"
+        animate={{
+          y: [0, -20, 0],
+          rotate: [0, 180, 360],
+        }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
       />
-      <div
-        className="absolute top-1/2 left-20 w-12 h-12 bg-accent-200 dark:bg-accent-800 rounded-full opacity-20 animate-float"
-        style={{ animationDelay: "2s" }}
+      <motion.div
+        className="absolute bottom-32 right-10 w-20 h-20 bg-secondary-200 dark:bg-secondary-800 rounded-full opacity-30"
+        animate={{
+          y: [0, 20, 0],
+          rotate: [360, 180, 0],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1,
+        }}
+      />
+      <motion.div
+        className="absolute top-1/2 left-20 w-16 h-16 bg-accent-200 dark:bg-accent-800 rounded-full opacity-30"
+        animate={{
+          x: [0, 30, 0],
+          y: [0, -30, 0],
+          scale: [1, 1.2, 1],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 2,
+        }}
       />
     </section>
   );
