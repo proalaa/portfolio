@@ -18,8 +18,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "aladdin@example.com",
-    href: "mailto:aladdin@example.com",
+    value: "alaa4455@gmail.com",
+    href: "mailto:alaa4455@gmail.com",
     color: "from-blue-500 to-cyan-500",
   },
   {
@@ -32,7 +32,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Saudi Arabia",
+    value: "Riyadh, Saudi Arabia",
     href: "#",
     color: "from-purple-500 to-pink-500",
   },
@@ -42,25 +42,19 @@ const socialLinks = [
   {
     icon: Github,
     label: "GitHub",
-    href: "https://github.com/aladdin",
+    href: "https://github.com/proalaa",
     color: "hover:text-neutral-900 dark:hover:text-neutral-100",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    href: "https://linkedin.com/in/aladdin",
+    href: "https://www.linkedin.com/in/alaa-aldeen-alhaddad/",
     color: "hover:text-blue-600",
-  },
-  {
-    icon: Twitter,
-    label: "Twitter",
-    href: "https://twitter.com/aladdin",
-    color: "hover:text-blue-400",
   },
   {
     icon: MessageCircle,
     label: "WhatsApp",
-    href: "https://wa.me/966XXXXXXXXX",
+    href: "https://wa.me/967771034963",
     color: "hover:text-green-500",
   },
 ];

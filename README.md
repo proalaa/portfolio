@@ -235,9 +235,9 @@ Contributions, issues, and feature requests are welcome!
 
 **Aladdin Mohamed Al-Haddad**
 
-- Email: aladdin@example.com
-- LinkedIn: [linkedin.com/in/aladdin](https://linkedin.com/in/aladdin)
-- GitHub: [github.com/aladdin](https://github.com/aladdin)
+- Email: alaa4455@gmail.com
+- LinkedIn: [linkedin.com/in/aladdin](https://www.linkedin.com/in/alaa-aldeen-alhaddad/)
+- GitHub: [github.com/aladdin](https://github.com/proalaa)
 
 ---
 

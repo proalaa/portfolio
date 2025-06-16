@@ -15,9 +15,13 @@ const navigation = [
 ];
 
 const socialLinks = [
-  { name: "GitHub", href: "https://github.com", icon: Github },
-  { name: "LinkedIn", href: "https://linkedin.com", icon: Linkedin },
-  { name: "Email", href: "mailto:aladdin@example.com", icon: Mail },
+  { name: "GitHub", href: "https://github.com/proalaa", icon: Github },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/alaa-aldeen-alhaddad/",
+    icon: Linkedin,
+  },
+  { name: "Email", href: "mailto:alaa4455@gmail.com", icon: Mail },
 ];
 
 export function Header() {

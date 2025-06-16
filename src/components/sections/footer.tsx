@@ -1,17 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, Mail, Heart, ArrowUp } from "lucide-react";
+import { Github, Linkedin, Mail, Heart, ArrowUp } from "lucide-react";
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com/aladdin", label: "GitHub" },
+  { icon: Github, href: "https://github.com/proalaa", label: "GitHub" },
   {
     icon: Linkedin,
-    href: "https://linkedin.com/in/aladdin",
+    href: "https://www.linkedin.com/in/alaa-aldeen-alhaddad/",
     label: "LinkedIn",
   },
-  { icon: Twitter, href: "https://twitter.com/aladdin", label: "Twitter" },
-  { icon: Mail, href: "mailto:aladdin@example.com", label: "Email" },
+  { icon: Mail, href: "mailto:alaa4455@gmail.com", label: "Email" },
 ];
 
 const quickLinks = [

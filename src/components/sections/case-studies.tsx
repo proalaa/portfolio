@@ -23,7 +23,7 @@ const caseStudies = [
     subtitle: "Zad Project - Adapting platform for non-profit organizations",
     challenge:
       "The Zad Project needed to improve the experience for charity stores using the Merchant Dashboard. The biggest challenge was applying a new identity without a centralized theming system, requiring extensive research and consultation with team members.",
-    role: "Frontend Developer & UI/UX Specialist",
+    role: "Frontend Developer",
     solution:
       "Built a reliable theming solution from scratch to adapt the platform's UI and overall experience to match the identity and operational needs of non-profit organizations. Implemented new color themes and visual adjustments across the entire dashboard.",
     technologies: [
