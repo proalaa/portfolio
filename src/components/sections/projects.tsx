@@ -15,11 +15,11 @@ import { projects, Project } from "@/content/projects";
 import { Button } from "@/components/ui/button";
 
 const categories = [
-  { id: "all", label: "All Projects", count: projects.length },
+  { id: "all", label: "All Features", count: projects.length },
   {
-    id: "web-app",
-    label: "Web Apps",
-    count: projects.filter((p) => p.category === "web-app").length,
+    id: "dashboard",
+    label: "Dashboard",
+    count: projects.filter((p) => p.category === "dashboard").length,
   },
   {
     id: "ui-ux",
@@ -27,19 +27,19 @@ const categories = [
     count: projects.filter((p) => p.category === "ui-ux").length,
   },
   {
-    id: "tool",
-    label: "Tools",
-    count: projects.filter((p) => p.category === "tool").length,
+    id: "security",
+    label: "Security",
+    count: projects.filter((p) => p.category === "security").length,
   },
   {
-    id: "mobile",
-    label: "Mobile",
-    count: projects.filter((p) => p.category === "mobile").length,
+    id: "performance",
+    label: "Performance",
+    count: projects.filter((p) => p.category === "performance").length,
   },
   {
-    id: "concept",
-    label: "Concepts",
-    count: projects.filter((p) => p.category === "concept").length,
+    id: "integration",
+    label: "Integration",
+    count: projects.filter((p) => p.category === "integration").length,
   },
 ];
 
@@ -55,7 +55,7 @@ const statusColors = {
   concept: "text-purple-600 dark:text-purple-400",
 };
 
-export function Projects() {
+export function Features() {
   const [activeCategory, setActiveCategory] = useState("all");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
@@ -65,7 +65,7 @@ export function Projects() {
       : projects.filter((project) => project.category === activeCategory);
 
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-neutral-950">
+    <section id="features" className="py-20 bg-white dark:bg-neutral-950">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -76,12 +76,12 @@ export function Projects() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-neutral-900 dark:text-neutral-100 mb-6">
-            Featured Projects
+            Featured Features
           </h2>
           <p className="text-xl text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto leading-relaxed">
-            A showcase of my work including e-commerce solutions, design
-            systems, and innovative concepts. While I work on confidential
-            projects at Zid, these demonstrate my skills and approach.
+            A showcase of key features I&apos;ve developed at Zid, demonstrating
+            my approach to solving real-world challenges and improving the
+            merchant experience.
           </p>
         </motion.div>
 
@@ -234,7 +234,8 @@ export function Projects() {
           className="text-center mt-16"
         >
           <p className="text-neutral-600 dark:text-neutral-400 mb-6">
-            Interested in working together or learning more about my approach?
+            Interested in seeing more of my work or discussing how I can
+            contribute to your team?
           </p>
           <Button
             size="lg"
@@ -245,7 +246,7 @@ export function Projects() {
         </motion.div>
       </div>
 
-      {/* Project Detail Modal */}
+      {/* Feature Detail Modal */}
       <AnimatePresence>
         {selectedProject && (
           <motion.div

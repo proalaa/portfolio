@@ -249,11 +249,11 @@ export function Hero() {
             >
               <Button
                 size="lg"
-                onClick={() => scrollToSection("projects")}
+                onClick={() => scrollToSection("features")}
                 className="group relative overflow-hidden px-8 py-4 text-lg font-semibold"
               >
                 <motion.span className="relative z-10 flex items-center gap-3">
-                  View My Work
+                  View My Features
                   <motion.div
                     animate={{ x: [0, 5, 0] }}
                     transition={{ repeat: Infinity, duration: 1.5 }}
