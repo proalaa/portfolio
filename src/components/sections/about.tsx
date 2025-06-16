@@ -15,38 +15,38 @@ import {
 
 const skills = [
   {
-    name: "React & Next.js",
-    level: 95,
+    name: "React & Vue.js",
+    level: 90,
     icon: Code,
     color: "from-blue-500 to-cyan-500",
   },
   {
-    name: "TypeScript",
-    level: 90,
+    name: "JavaScript/TypeScript",
+    level: 85,
     icon: Code,
     color: "from-blue-600 to-blue-400",
   },
   {
     name: "UI/UX Design",
-    level: 85,
+    level: 80,
     icon: Palette,
     color: "from-purple-500 to-pink-500",
   },
   {
     name: "Performance Optimization",
-    level: 88,
+    level: 75,
     icon: Zap,
     color: "from-yellow-500 to-orange-500",
   },
   {
-    name: "Team Leadership",
-    level: 80,
+    name: "Laravel (Backend)",
+    level: 70,
     icon: Users,
     color: "from-green-500 to-emerald-500",
   },
   {
-    name: "Accessibility",
-    level: 92,
+    name: "E-commerce Platforms",
+    level: 85,
     icon: Globe,
     color: "from-indigo-500 to-purple-500",
   },
@@ -54,54 +54,40 @@ const skills = [
 
 const timeline = [
   {
-    year: "2024",
-    title: "Senior Frontend Developer",
-    company: "Zid",
-    location: "Saudi Arabia",
-    description:
-      "Leading frontend development for e-commerce platform serving thousands of merchants across the Middle East. Focusing on performance optimization, user experience, and scalable architecture.",
-    achievements: [
-      "Improved application performance by 40%",
-      "Led design system implementation",
-      "Mentored junior developers",
-      "Contributed to architectural decisions",
-    ],
-  },
-  {
-    year: "2023",
+    year: "2020 - Present",
     title: "Frontend Developer",
     company: "Zid",
     location: "Saudi Arabia",
     description:
-      "Developed and maintained critical features for the e-commerce platform. Specialized in React, TypeScript, and modern frontend technologies.",
+      "Working as a frontend developer on the e-commerce platform serving thousands of merchants across the Middle East. Contributing to platform features, UI/UX improvements, and technical enhancements.",
     achievements: [
-      "Built responsive dashboard interfaces",
-      "Implemented real-time data visualization",
-      "Optimized bundle sizes and loading times",
-      "Enhanced accessibility compliance",
+      "Developed and maintained critical platform features",
+      "Implemented UI/UX improvements across the dashboard",
+      "Contributed to performance optimizations",
+      "Worked on various projects including Zad, Hermes, and security features",
     ],
   },
   {
-    year: "2022",
-    title: "Junior Frontend Developer",
-    company: "Previous Company",
+    year: "2020",
+    title: "Freelance Fullstack Developer",
+    company: "Talap",
     location: "Yemen",
     description:
-      "Started my professional journey building web applications and learning modern frontend technologies.",
+      "Brief freelance engagement working with Laravel for a company that is no longer in operation. Gained experience in fullstack development and modern web technologies.",
     achievements: [
-      "Mastered React and modern JavaScript",
-      "Built responsive web applications",
-      "Collaborated with design teams",
+      "Developed web applications using Laravel",
+      "Gained fullstack development experience",
+      "Worked with modern web technologies",
       "Learned agile development practices",
     ],
   },
 ];
 
 const stats = [
-  { label: "Years of Experience", value: "3+", icon: Calendar },
-  { label: "Projects Completed", value: "25+", icon: Code },
-  { label: "Happy Clients", value: "15+", icon: Users },
-  { label: "Code Commits", value: "1000+", icon: Zap },
+  { label: "Years of Experience", value: "4+", icon: Calendar },
+  { label: "Features Developed", value: "50+", icon: Code },
+  { label: "Platform Users", value: "1000+", icon: Users },
+  { label: "Code Commits", value: "2000+", icon: Zap },
 ];
 
 export function About() {
@@ -177,10 +163,17 @@ export function About() {
                 innovate, and solve real-world problems.
               </p>
               <p>
-                My journey led me to Saudi Arabia, where I joined Zid, a leading
-                e-commerce platform in the Middle East. Here, I&apos;ve had the
-                opportunity to work on products that serve thousands of
-                merchants and millions of customers across the region.
+                I started my professional journey in 2020 with a brief freelance
+                engagement at Talap, where I worked with Laravel and gained
+                valuable fullstack development experience. This experience
+                helped me understand both frontend and backend development.
+              </p>
+              <p>
+                Since 2020, I&apos;ve been working at Zid, a leading e-commerce
+                platform in the Middle East. Here, I&apos;ve had the opportunity
+                to work on products that serve thousands of merchants and
+                millions of customers across the region, focusing on frontend
+                development and user experience.
               </p>
               <p>
                 I&apos;m passionate about creating inclusive, accessible, and
