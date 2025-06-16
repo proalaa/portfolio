@@ -86,9 +86,9 @@ const timeline = [
 
 const stats = [
   { label: "Years of Experience", value: "4+", icon: Calendar },
-  { label: "Pull Requests Opened", value: "454", icon: GitPullRequest },
-  { label: "Commits Authored", value: "2,536", icon: Zap },
-  { label: "Code Reviews", value: "257", icon: Users },
+  { label: "Pull Requests Opened", value: "454+", icon: GitPullRequest },
+  { label: "Commits Authored", value: "2,536+", icon: Zap },
+  { label: "Code Reviews", value: "257+", icon: Users },
 ];
 
 export function About() {
