@@ -11,6 +11,7 @@ import {
   Award,
   MapPin,
   Calendar,
+  GitPullRequest,
 } from "lucide-react";
 
 const skills = [
@@ -85,9 +86,9 @@ const timeline = [
 
 const stats = [
   { label: "Years of Experience", value: "4+", icon: Calendar },
-  { label: "Features Developed", value: "50+", icon: Code },
-  { label: "Platform Users", value: "1000+", icon: Users },
-  { label: "Code Commits", value: "2000+", icon: Zap },
+  { label: "Pull Requests Opened", value: "454", icon: GitPullRequest },
+  { label: "Commits Authored", value: "2,536", icon: Zap },
+  { label: "Code Reviews", value: "257", icon: Users },
 ];
 
 export function About() {
