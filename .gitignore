@@ -20,6 +20,9 @@
 # production
 /build
 
+# deployment
+/hostinger-deploy/
+
 # misc
 .DS_Store
 *.pem
