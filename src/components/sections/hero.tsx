@@ -2,7 +2,20 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ChevronDown, Download, MessageCircle } from "lucide-react";
+import {
+  ChevronDown,
+  Download,
+  MessageCircle,
+  Code,
+  Zap,
+  Palette,
+  Globe,
+  Shield,
+  Cpu,
+  Database,
+  Cloud,
+  Rocket,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatedBackground } from "@/components/ui/animated-background";
 
@@ -95,6 +108,17 @@ export function Hero() {
 
       {/* Enhanced gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/80 to-white/95 dark:from-neutral-950/95 dark:via-neutral-950/80 dark:to-neutral-950/95" />
+
+      {/* Subtle Glow Effect */}
+      <div className="absolute inset-0 bg-gradient-radial from-primary-500/5 via-transparent to-transparent" />
+
+      {/* Professional Grid Lines */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary-400/20 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-secondary-400/20 to-transparent" />
+        <div className="absolute top-0 left-0 w-px h-full bg-gradient-to-b from-transparent via-accent-400/20 to-transparent" />
+        <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-primary-400/20 to-transparent" />
+      </div>
 
       <motion.div
         variants={containerVariants}
@@ -363,6 +387,197 @@ export function Hero() {
           delay: 2,
         }}
       />
+
+      {/* Floating Particles */}
+      {[...Array(15)].map((_, i) => (
+        <motion.div
+          key={i}
+          className="absolute w-1 h-1 bg-primary-400/30 rounded-full"
+          style={{
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+          }}
+          animate={{
+            y: [0, -30, 0],
+            opacity: [0, 0.8, 0],
+            scale: [0, 1, 0],
+          }}
+          transition={{
+            duration: 3 + Math.random() * 2,
+            repeat: Infinity,
+            delay: Math.random() * 3,
+            ease: "easeInOut",
+          }}
+        />
+      ))}
+
+      {/* Tech Grid Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `
+            linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)
+          `,
+            backgroundSize: "50px 50px",
+          }}
+        />
+      </div>
+
+      {/* Floating Tech Icons */}
+      <motion.div
+        className="absolute top-1/4 right-16 text-primary-400/20"
+        animate={{
+          y: [0, -15, 0],
+          opacity: [0.2, 0.6, 0.2],
+          scale: [1, 1.1, 1],
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      >
+        <Code className="w-8 h-8" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-1/3 left-24 text-secondary-400/20"
+        animate={{
+          y: [0, 20, 0],
+          opacity: [0.2, 0.5, 0.2],
+          rotate: [0, 360, 0],
+        }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1,
+        }}
+      >
+        <Zap className="w-6 h-6" />
+      </motion.div>
+
+      <motion.div
+        className="absolute bottom-1/4 left-16 text-accent-400/20"
+        animate={{
+          x: [0, 25, 0],
+          opacity: [0.2, 0.4, 0.2],
+          scale: [1, 0.8, 1],
+        }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 2,
+        }}
+      >
+        <Palette className="w-7 h-7" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-2/3 right-24 text-primary-400/15"
+        animate={{
+          y: [0, -10, 0],
+          opacity: [0.1, 0.3, 0.1],
+          rotate: [0, -360, 0],
+        }}
+        transition={{
+          duration: 7,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 3,
+        }}
+      >
+        <Globe className="w-5 h-5" />
+      </motion.div>
+
+      <motion.div
+        className="absolute bottom-1/3 right-8 text-secondary-400/15"
+        animate={{
+          x: [0, -20, 0],
+          y: [0, 15, 0],
+          opacity: [0.1, 0.4, 0.1],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1.5,
+        }}
+      >
+        <Shield className="w-6 h-6" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-1/2 right-32 text-accent-400/20"
+        animate={{
+          y: [0, 25, 0],
+          opacity: [0.2, 0.5, 0.2],
+          scale: [1, 1.2, 1],
+        }}
+        transition={{
+          duration: 9,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 0.5,
+        }}
+      >
+        <Cpu className="w-7 h-7" />
+      </motion.div>
+
+      <motion.div
+        className="absolute bottom-1/4 right-20 text-primary-400/15"
+        animate={{
+          x: [0, 15, 0],
+          y: [0, -20, 0],
+          opacity: [0.1, 0.3, 0.1],
+          rotate: [0, 180, 0],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 2.5,
+        }}
+      >
+        <Database className="w-5 h-5" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-1/4 left-32 text-secondary-400/20"
+        animate={{
+          y: [0, -30, 0],
+          opacity: [0.2, 0.6, 0.2],
+          scale: [1, 0.9, 1],
+        }}
+        transition={{
+          duration: 11,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1,
+        }}
+      >
+        <Cloud className="w-6 h-6" />
+      </motion.div>
+
+      <motion.div
+        className="absolute bottom-1/3 left-8 text-accent-400/15"
+        animate={{
+          x: [0, -25, 0],
+          opacity: [0.1, 0.4, 0.1],
+          rotate: [0, -180, 0],
+        }}
+        transition={{
+          duration: 12,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 3.5,
+        }}
+      >
+        <Rocket className="w-5 h-5" />
+      </motion.div>
     </section>
   );
 }
