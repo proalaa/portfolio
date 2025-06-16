@@ -5,9 +5,7 @@ import {
   ChevronRight,
   TrendingUp,
   Users,
-  Zap,
   Shield,
-  Smartphone,
   Monitor,
   Code,
   Target,
@@ -21,114 +19,134 @@ import { Button } from "@/components/ui/button";
 const caseStudies = [
   {
     id: 1,
-    title: "E-commerce Performance Optimization",
-    subtitle: "Reducing load times and improving conversion rates",
+    title: "Enhancing Charity Store Experience",
+    subtitle: "Zad Project - Adapting platform for non-profit organizations",
     challenge:
-      "The main e-commerce platform was experiencing slow load times during peak traffic, leading to cart abandonment and reduced conversion rates. Users were reporting frustration with the checkout process.",
-    role: "Lead Frontend Developer",
+      "The Zad Project needed to improve the experience for charity stores using the Merchant Dashboard. The biggest challenge was applying a new identity without a centralized theming system, requiring extensive research and consultation with team members.",
+    role: "Frontend Developer & UI/UX Specialist",
     solution:
-      "Implemented code splitting, lazy loading, and optimized the critical rendering path. Redesigned the checkout flow with progressive enhancement and added real-time performance monitoring.",
+      "Built a reliable theming solution from scratch to adapt the platform's UI and overall experience to match the identity and operational needs of non-profit organizations. Implemented new color themes and visual adjustments across the entire dashboard.",
     technologies: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "Webpack",
-      "Web Vitals",
-      "Redis",
+      "Vue.js",
+      "CSS3",
+      "SCSS",
+      "Design Systems",
+      "UI/UX Design",
+      "Theme Architecture",
     ],
     outcomes: [
-      { metric: "Page Load Time", improvement: "65% faster", icon: Zap },
-      { metric: "Conversion Rate", improvement: "+23%", icon: TrendingUp },
-      { metric: "Cart Abandonment", improvement: "-31%", icon: Target },
-      { metric: "User Satisfaction", improvement: "+40%", icon: Users },
+      { metric: "Onboarding Experience", improvement: "Smoother", icon: Users },
+      { metric: "Platform Relevance", improvement: "Enhanced", icon: Target },
+      { metric: "Trust Factor", improvement: "Improved", icon: Shield },
+      { metric: "Merchant Satisfaction", improvement: "Positive", icon: Award },
     ],
-    duration: "3 months",
+    duration: "2 months",
     impact: "High",
-    category: "Performance",
+    category: "UI/UX",
     color: "from-blue-500 to-cyan-500",
   },
   {
     id: 2,
-    title: "Mobile-First Checkout Experience",
-    subtitle: "Redesigning the mobile payment flow",
+    title: "Supporting Future Scalability",
+    subtitle: "Hermes Project - React & Remix.js architecture",
     challenge:
-      "Mobile users represented 70% of traffic but had a significantly lower conversion rate due to a complex checkout process that wasn't optimized for mobile devices.",
-    role: "Frontend Developer & UX Collaborator",
+      "Switching from a legacy Vue-based system to React + Remix was a significant learning curve. The team needed to build and refine the merchant-facing UI while preparing Hermes for public launch.",
+    role: "Frontend Developer & Team Collaborator",
     solution:
-      "Redesigned the entire mobile checkout experience with a focus on one-handed usage, implemented biometric authentication, and created a progressive web app with offline capabilities.",
+      "Allocated self-learning time and built internal sessions to bridge skill gaps efficiently. Contributed to building and refining the merchant-facing UI, implementing new features, fixing bugs, and helping prepare for public launch.",
     technologies: [
-      "React Native",
-      "PWA",
-      "WebAuthn",
-      "Stripe API",
-      "Service Workers",
-      "IndexedDB",
+      "React",
+      "Remix.js",
+      "TypeScript",
+      "Vue.js",
+      "JavaScript",
+      "Frontend Architecture",
     ],
     outcomes: [
-      { metric: "Mobile Conversion", improvement: "+45%", icon: Smartphone },
-      { metric: "Checkout Time", improvement: "50% faster", icon: Clock },
-      { metric: "User Retention", improvement: "+28%", icon: Users },
-      { metric: "App Store Rating", improvement: "4.8/5", icon: Award },
+      { metric: "Team Onboarding", improvement: "Accelerated", icon: Users },
+      {
+        metric: "Production Readiness",
+        improvement: "Reduced Time",
+        icon: Clock,
+      },
+      { metric: "Skill Development", improvement: "Enhanced", icon: Code },
+      {
+        metric: "Architecture Transition",
+        improvement: "Successful",
+        icon: TrendingUp,
+      },
     ],
-    duration: "4 months",
+    duration: "3 months",
     impact: "High",
-    category: "Mobile",
+    category: "Architecture",
     color: "from-green-500 to-emerald-500",
   },
   {
     id: 3,
-    title: "Real-time Analytics Dashboard",
-    subtitle: "Building a comprehensive merchant analytics platform",
+    title: "Enabling Merchant Control",
+    subtitle: "Session Timeout Configuration - Security & flexibility",
     challenge:
-      "Merchants needed real-time insights into their sales, inventory, and customer behavior, but the existing dashboard was slow and provided limited visualization options.",
-    role: "Senior Frontend Developer",
+      "Store owners needed more control over their account security settings, specifically the ability to configure their own session timeout settings through the dashboard.",
+    role: "Frontend Developer",
     solution:
-      "Built a real-time dashboard with WebSocket connections, interactive charts, and customizable widgets. Implemented data virtualization for handling large datasets efficiently.",
+      "Implemented the front-end logic and UI, enabling configuration options to be seamlessly accessible to merchants. This gave them more control over their account security and aligned with the mission to improve platform flexibility.",
     technologies: [
       "Vue.js",
-      "D3.js",
-      "WebSockets",
-      "Chart.js",
-      "Vuex",
-      "WebWorkers",
+      "JavaScript",
+      "UI Components",
+      "Form Handling",
+      "Security Features",
+      "Dashboard Integration",
     ],
     outcomes: [
-      { metric: "Data Processing", improvement: "10x faster", icon: BarChart3 },
-      { metric: "User Engagement", improvement: "+60%", icon: Users },
-      { metric: "Decision Speed", improvement: "3x faster", icon: Target },
-      { metric: "Platform Adoption", improvement: "+85%", icon: TrendingUp },
+      { metric: "Merchant Control", improvement: "Enhanced", icon: Shield },
+      { metric: "Security Flexibility", improvement: "Improved", icon: Target },
+      {
+        metric: "Platform Flexibility",
+        improvement: "Increased",
+        icon: TrendingUp,
+      },
+      { metric: "User Experience", improvement: "Better", icon: Users },
     ],
-    duration: "5 months",
-    impact: "High",
-    category: "Analytics",
+    duration: "1 month",
+    impact: "Medium",
+    category: "Security",
     color: "from-purple-500 to-pink-500",
   },
   {
     id: 4,
-    title: "Design System & Component Library",
-    subtitle: "Creating a scalable design system for the platform",
+    title: "Continuous Enhancement",
+    subtitle: "Enterprise & Pro Quick Wins (Patch 2) - Platform improvements",
     challenge:
-      "Multiple teams were building inconsistent UI components, leading to design debt, slower development cycles, and poor user experience across different platform areas.",
-    role: "Frontend Architect & Design System Lead",
+      "Enterprise and professional merchants had long-standing feedback that needed to be addressed. Multiple quick improvements were needed throughout the merchant dashboard to enhance usability.",
+    role: "Frontend Developer",
     solution:
-      "Developed a comprehensive design system with reusable components, design tokens, and automated testing. Created documentation and migration tools for existing projects.",
+      "Worked across several user stories, delivering UI/UX improvements, bug fixes, and small enhancements throughout the merchant dashboard. These cumulative changes contributed to smoother usability for high-tier merchants.",
     technologies: [
-      "Storybook",
-      "Styled Components",
-      "Design Tokens",
-      "Jest",
-      "Chromatic",
-      "Figma API",
+      "Vue.js",
+      "JavaScript",
+      "CSS3",
+      "UI/UX Design",
+      "Bug Fixes",
+      "Dashboard Features",
     ],
     outcomes: [
-      { metric: "Development Speed", improvement: "+40%", icon: Code },
-      { metric: "Design Consistency", improvement: "95%", icon: Shield },
-      { metric: "Bug Reduction", improvement: "-55%", icon: Target },
-      { metric: "Team Adoption", improvement: "100%", icon: Users },
+      { metric: "Usability", improvement: "Smoother", icon: Users },
+      {
+        metric: "Merchant Feedback",
+        improvement: "Addressed",
+        icon: MessageCircle,
+      },
+      { metric: "Platform Quality", improvement: "Enhanced", icon: Award },
+      {
+        metric: "High-tier Satisfaction",
+        improvement: "Improved",
+        icon: Target,
+      },
     ],
-    duration: "6 months",
-    impact: "Very High",
-    category: "Architecture",
+    duration: "2 months",
+    impact: "Medium",
+    category: "Enhancement",
     color: "from-orange-500 to-red-500",
   },
 ];
@@ -146,12 +164,12 @@ export function CaseStudies() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-neutral-900 dark:text-neutral-100 mb-6">
-            Case Studies
+            Latest Case Studies
           </h2>
           <p className="text-xl text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto leading-relaxed">
-            Real-world challenges I&apos;ve solved at Zid, showcasing my
-            approach to complex frontend problems and the measurable impact of
-            my solutions.
+            A selection of real-world product contributions I&apos;ve made
+            during my time at Zid. These studies highlight my role and the
+            impact of my efforts on the platform.
           </p>
         </motion.div>
 
@@ -323,11 +341,12 @@ export function CaseStudies() {
           className="text-center mt-12"
         >
           <h3 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4">
-            Want to Learn More?
+            Want to See More?
           </h3>
           <p className="text-neutral-600 dark:text-neutral-400 mb-6 max-w-2xl mx-auto">
-            I&apos;d love to discuss these projects in detail and share how my
-            experience can benefit your team.
+            I&apos;d love to share more case studies and discuss how my
+            experience can benefit your team. Let&apos;s connect and explore
+            potential collaborations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -335,7 +354,7 @@ export function CaseStudies() {
               className="bg-primary-600 hover:bg-primary-700 text-white"
             >
               <MessageCircle className="w-4 h-4 mr-2" />
-              Schedule a Discussion
+              Let&apos;s Connect
             </Button>
             <Button size="lg" variant="outline">
               <ChevronRight className="w-4 h-4 mr-2" />
