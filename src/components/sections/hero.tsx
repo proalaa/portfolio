@@ -86,17 +86,6 @@ export function Hero() {
     },
   };
 
-  const letterVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
-
   return (
     <section
       id="home"
@@ -130,42 +119,38 @@ export function Hero() {
             </motion.p>
           </motion.div>
 
-          {/* Name with stunning animations */}
+          {/* Name with professional animation */}
           <motion.div variants={nameVariants} className="mb-6">
             <motion.h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-              {/* First name with letter animation */}
+              {/* First name with clean animation */}
               <motion.div
                 className="block mb-2"
-                initial="hidden"
-                animate="visible"
-                transition={{ staggerChildren: 0.1, delayChildren: 0.5 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
               >
-                {"Aladdin Mohamed".split("").map((letter, index) => (
-                  <motion.span
-                    key={index}
-                    variants={letterVariants}
-                    className="inline-block text-neutral-900 dark:text-neutral-100"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4, #10b981)",
-                      backgroundSize: "300% 300%",
-                      animation: "gradient-shift 4s ease-in-out infinite",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      backgroundClip: "text",
-                    }}
-                  >
-                    {letter === " " ? "\u00A0" : letter}
-                  </motion.span>
-                ))}
+                <span
+                  className="inline-block text-neutral-900 dark:text-neutral-100"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4, #10b981)",
+                    backgroundSize: "300% 300%",
+                    animation: "gradient-shift 4s ease-in-out infinite",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
+                  Aladdin Mohamed
+                </span>
               </motion.div>
 
-              {/* Last name with different animation */}
+              {/* Last name with subtle animation */}
               <motion.div
                 className="block"
-                initial={{ opacity: 0, rotateX: -90 }}
-                animate={{ opacity: 1, rotateX: 0 }}
-                transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8, duration: 0.6, ease: "easeOut" }}
               >
                 <span className="text-neutral-900 dark:text-neutral-100 tracking-tight">
                   Al-Haddad
