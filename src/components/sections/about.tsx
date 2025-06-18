@@ -109,9 +109,8 @@ export function About() {
             About Me
           </h2>
           <p className="text-xl text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto leading-relaxed">
-            A passionate frontend developer from Yemen, now contributing to the
-            thriving tech ecosystem in Saudi Arabia. I believe in creating
-            digital experiences that make a difference.
+            A passionate frontend developer based in Saudi Arabia. I believe in
+            creating digital experiences that make a difference.
           </p>
         </motion.div>
 
@@ -158,10 +157,10 @@ export function About() {
             </h3>
             <div className="space-y-4 text-neutral-600 dark:text-neutral-400 leading-relaxed">
               <p>
-                Born and raised in Yemen, I discovered my passion for technology
-                and web development during my university years. The digital
-                world fascinated me with its endless possibilities to create,
-                innovate, and solve real-world problems.
+                My passion for technology and web development started during my
+                university years. The digital world fascinated me with its
+                endless possibilities to create, innovate, and solve real-world
+                problems.
               </p>
               <p>
                 I started my professional journey in 2020 with a brief freelance
