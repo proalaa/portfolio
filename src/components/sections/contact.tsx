@@ -9,7 +9,6 @@ import {
   Send,
   Github,
   Linkedin,
-  Twitter,
   MessageCircle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -25,8 +24,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+966 XX XXX XXXX",
-    href: "tel:+966XXXXXXXXX",
+    value: "+966 50 720 965",
+    href: "tel:+96650720965",
     color: "from-green-500 to-emerald-500",
   },
   {
