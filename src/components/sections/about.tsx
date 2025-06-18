@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Code,
@@ -13,45 +12,6 @@ import {
   Calendar,
   GitPullRequest,
 } from "lucide-react";
-
-const skills = [
-  {
-    name: "React & Vue.js",
-    level: 90,
-    icon: Code,
-    color: "from-blue-500 to-cyan-500",
-  },
-  {
-    name: "JavaScript/TypeScript",
-    level: 85,
-    icon: Code,
-    color: "from-blue-600 to-blue-400",
-  },
-  {
-    name: "UI/UX Design",
-    level: 80,
-    icon: Palette,
-    color: "from-purple-500 to-pink-500",
-  },
-  {
-    name: "Performance Optimization",
-    level: 75,
-    icon: Zap,
-    color: "from-yellow-500 to-orange-500",
-  },
-  {
-    name: "Laravel (Backend)",
-    level: 70,
-    icon: Users,
-    color: "from-green-500 to-emerald-500",
-  },
-  {
-    name: "E-commerce Platforms",
-    level: 85,
-    icon: Globe,
-    color: "from-indigo-500 to-purple-500",
-  },
-];
 
 const timeline = [
   {
@@ -92,8 +52,6 @@ const stats = [
 ];
 
 export function About() {
-  const [activeSkill, setActiveSkill] = useState<number | null>(null);
-
   return (
     <section id="about" className="py-20 bg-neutral-50 dark:bg-neutral-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -201,43 +159,95 @@ export function About() {
             <h3 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-6">
               Skills & Expertise
             </h3>
-            <div className="space-y-6">
-              {skills.map((skill, index) => (
-                <motion.div
-                  key={skill.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="group"
-                  onMouseEnter={() => setActiveSkill(index)}
-                  onMouseLeave={() => setActiveSkill(null)}
-                >
-                  <div className="flex items-center justify-between mb-2">
-                    <div className="flex items-center">
-                      <skill.icon className="w-5 h-5 mr-3 text-primary-600 dark:text-primary-400" />
-                      <span className="font-medium text-neutral-900 dark:text-neutral-100">
-                        {skill.name}
-                      </span>
-                    </div>
-                    <span className="text-sm text-neutral-600 dark:text-neutral-400">
-                      {skill.level}%
-                    </span>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="flex items-start space-x-4">
+                <Code className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                <div>
+                  <div className="font-semibold text-neutral-900 dark:text-neutral-100">
+                    React & Vue.js
                   </div>
-                  <div className="w-full bg-neutral-200 dark:bg-neutral-700 rounded-full h-2 overflow-hidden">
-                    <motion.div
-                      className={`h-full bg-gradient-to-r ${skill.color} rounded-full`}
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${skill.level}%` }}
-                      transition={{ duration: 1, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      animate={{
-                        scale: activeSkill === index ? 1.02 : 1,
-                      }}
-                    />
+                  <div className="text-neutral-600 dark:text-neutral-400 text-sm">
+                    Built and maintained complex dashboards and e-commerce
+                    features at Zid using React and Vue.js, focusing on
+                    scalability and maintainability.
                   </div>
-                </motion.div>
-              ))}
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <Zap className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                <div>
+                  <div className="font-semibold text-neutral-900 dark:text-neutral-100">
+                    Performance Optimization
+                  </div>
+                  <div className="text-neutral-600 dark:text-neutral-400 text-sm">
+                    Improved load times and user experience for high-traffic
+                    platforms through code splitting, lazy loading, and best
+                    practices.
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <Palette className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                <div>
+                  <div className="font-semibold text-neutral-900 dark:text-neutral-100">
+                    UI/UX Design
+                  </div>
+                  <div className="text-neutral-600 dark:text-neutral-400 text-sm">
+                    Designed and implemented modern, accessible interfaces with
+                    a focus on usability and aesthetics for e-commerce
+                    merchants.
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <Users className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                <div>
+                  <div className="font-semibold text-neutral-900 dark:text-neutral-100">
+                    Team Collaboration
+                  </div>
+                  <div className="text-neutral-600 dark:text-neutral-400 text-sm">
+                    Collaborated with cross-functional teams, participated in
+                    code reviews, and mentored junior developers to deliver
+                    high-quality features.
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <Globe className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                <div>
+                  <div className="font-semibold text-neutral-900 dark:text-neutral-100">
+                    E-commerce Platforms
+                  </div>
+                  <div className="text-neutral-600 dark:text-neutral-400 text-sm">
+                    Deep experience building and enhancing e-commerce solutions,
+                    integrating payment gateways, and optimizing for conversion.
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <Code className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                <div>
+                  <div className="font-semibold text-neutral-900 dark:text-neutral-100">
+                    JavaScript / TypeScript
+                  </div>
+                  <div className="text-neutral-600 dark:text-neutral-400 text-sm">
+                    Expert in modern JavaScript and TypeScript, applying best
+                    practices for maintainable, robust, and scalable codebases.
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <Users className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                <div>
+                  <div className="font-semibold text-neutral-900 dark:text-neutral-100">
+                    Laravel (Backend)
+                  </div>
+                  <div className="text-neutral-600 dark:text-neutral-400 text-sm">
+                    Built and maintained backend APIs and admin panels using
+                    Laravel, supporting seamless integration with frontend apps.
+                  </div>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
