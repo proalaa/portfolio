@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/lib/theme-provider";
 import "./globals.css";
+import { FallingTechIcons } from "@/components/faillingIcons/FallingTechIcons";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -87,6 +88,7 @@ export default function RootLayout({
         className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}
       >
         <ThemeProvider defaultTheme="system" storageKey="portfolio-theme">
+          <FallingTechIcons />
           {children}
         </ThemeProvider>
       </body>
