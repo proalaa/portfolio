@@ -161,7 +161,7 @@ export function About() {
             </h3>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="flex items-start space-x-4">
-                <Code className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                <Code className="w-10 h-10 text-primary-600 dark:text-primary-400" />
                 <div>
                   <div className="font-semibold text-neutral-900 dark:text-neutral-100">
                     React & Vue.js
@@ -174,7 +174,7 @@ export function About() {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <Zap className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                <Zap className="w-10 h-10 text-primary-600 dark:text-primary-400" />
                 <div>
                   <div className="font-semibold text-neutral-900 dark:text-neutral-100">
                     Performance Optimization
@@ -187,7 +187,7 @@ export function About() {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <Palette className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                <Palette className="w-10 h-10 text-primary-600 dark:text-primary-400" />
                 <div>
                   <div className="font-semibold text-neutral-900 dark:text-neutral-100">
                     UI/UX Design
@@ -200,7 +200,7 @@ export function About() {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <Users className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                <Users className="w-10 h-10 text-primary-600 dark:text-primary-400" />
                 <div>
                   <div className="font-semibold text-neutral-900 dark:text-neutral-100">
                     Team Collaboration
@@ -213,7 +213,7 @@ export function About() {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <Globe className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                <Globe className="w-10 h-10 text-primary-600 dark:text-primary-400" />
                 <div>
                   <div className="font-semibold text-neutral-900 dark:text-neutral-100">
                     E-commerce Platforms
@@ -225,7 +225,7 @@ export function About() {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <Code className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                <Code className="w-10 h-10 text-primary-600 dark:text-primary-400" />
                 <div>
                   <div className="font-semibold text-neutral-900 dark:text-neutral-100">
                     JavaScript / TypeScript
@@ -237,7 +237,7 @@ export function About() {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <Users className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                <Users className="w-10 h-10 text-primary-600 dark:text-primary-400" />
                 <div>
                   <div className="font-semibold text-neutral-900 dark:text-neutral-100">
                     Laravel (Backend)
