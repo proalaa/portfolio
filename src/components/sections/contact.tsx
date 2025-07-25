@@ -71,15 +71,36 @@ export function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    try {
+      // Using Formspree for email handling
+      const response = await fetch("https://formspree.io/f/xeozgljl", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
 
-    // Reset form
-    setFormData({ name: "", email: "", subject: "", message: "" });
-    setIsSubmitting(false);
-
-    // Show success message (you can implement a toast notification here)
-    alert("Message sent successfully! I'll get back to you soon.");
+      if (response.ok) {
+        // Reset form
+        setFormData({ name: "", email: "", subject: "", message: "" });
+        alert("Message sent successfully! I'll get back to you soon.");
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert(
+        "Sorry, there was an error sending your message. Please try again or contact me directly via email."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -218,7 +239,12 @@ export function Contact() {
               Send a Message
             </h3>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST"
+              onSubmit={handleSubmit}
+              className="space-y-6"
+            >
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label
