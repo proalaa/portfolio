@@ -28,7 +28,6 @@ const caseStudies = [
       "Built a reliable theming solution from scratch to adapt the platform's UI and overall experience to match the identity and operational needs of non-profit organizations. Implemented new color themes and visual adjustments across the entire dashboard.",
     technologies: [
       "Vue.js",
-      "CSS3",
       "SCSS",
       "Design Systems",
       "UI/UX Design",
@@ -47,38 +46,49 @@ const caseStudies = [
   },
   {
     id: 2,
-    title: "Supporting Future Scalability",
-    subtitle: "Hermes Project - React & Remix.js architecture",
+    title: "Merchant Dashboard Modernization",
+    subtitle:
+      "Hermes Project - Complete platform rewrite with modern React stack",
     challenge:
-      "Switching from a legacy Vue-based system to React + Remix was a significant learning curve. The team needed to build and refine the merchant-facing UI while preparing Hermes for public launch.",
-    role: "Frontend Developer & Team Collaborator",
+      "The existing merchant dashboard had become complex and difficult to maintain. The project needed to reduce complexity, increase delivery efficiency, and standardize the design approach across Zid's platform while maintaining feature parity.",
+    role: "Frontend Developer",
     solution:
-      "Allocated self-learning time and built internal sessions to bridge skill gaps efficiently. Contributed to building and refining the merchant-facing UI, implementing new features, fixing bugs, and helping prepare for public launch.",
+      "Contributed to the comprehensive rewrite of the merchant dashboard using React, TypeScript, MUI, and Remix Framework. Implemented modular architecture, reusable components, and modern state management while ensuring smooth transition for existing users.",
     technologies: [
       "React",
-      "Remix.js",
       "TypeScript",
-      "Vue.js",
-      "JavaScript",
-      "Frontend Architecture",
+      "MUI (Material-UI)",
+      "Remix Framework",
+      "React Query",
+      "Ky (HTTP client)",
+      "ESLint & Prettier",
+      "Caddy (Reverse Proxy)",
     ],
     outcomes: [
-      { metric: "Team Onboarding", improvement: "Accelerated", icon: Users },
       {
-        metric: "Production Readiness",
-        improvement: "Reduced Time",
-        icon: Clock,
-      },
-      { metric: "Skill Development", improvement: "Enhanced", icon: Code },
-      {
-        metric: "Architecture Transition",
-        improvement: "Successful",
+        metric: "Delivery Efficiency",
+        improvement: "Improved",
         icon: TrendingUp,
+      },
+      {
+        metric: "Code Quality",
+        improvement: "Enhanced",
+        icon: Code,
+      },
+      {
+        metric: "Design Consistency",
+        improvement: "Standardized",
+        icon: Target,
+      },
+      {
+        metric: "Development Time",
+        improvement: "Reduced",
+        icon: Clock,
       },
     ],
     duration: "3 months",
     impact: "High",
-    category: "Architecture",
+    category: "Platform Modernization",
     color: "from-green-500 to-emerald-500",
   },
   {
