@@ -8,7 +8,7 @@ A stunning, modern portfolio website showcasing frontend development expertise w
 
 ### 🎨 **Design & User Experience**
 
-- **Yemen-inspired color palette** with warm, professional colors
+- **inspired color palette** with warm, professional colors
 - **Dark/Light theme toggle** with system preference detection
 - **Responsive design** optimized for all devices
 - **Smooth animations** powered by Framer Motion
