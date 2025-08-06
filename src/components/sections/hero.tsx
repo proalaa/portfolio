@@ -258,7 +258,7 @@ export function Hero() {
             >
               <Button
                 size="lg"
-                onClick={() => scrollToSection("case-studies")}
+                onClick={() => scrollToSection("projects")}
                 className="group relative overflow-hidden px-8 py-4 text-lg font-semibold"
               >
                 <motion.span className="relative z-10 flex items-center gap-3">
@@ -305,9 +305,18 @@ export function Hero() {
                 variant="ghost"
                 size="lg"
                 className="group px-8 py-4 text-lg font-semibold"
+                asChild
               >
-                <Download className="w-5 h-5 mr-3 group-hover:animate-bounce" />
-                Download CV
+                <a
+                  href="/Alaa_AldeenAlHaddad_Resume.pdf"
+                  download="Alaa_AldeenAlHaddad_Resume.pdf"
+                  aria-label="Download Alaa Aldeen Al Haddad's Resume (PDF)"
+                  title="Download my resume as PDF"
+                  className="flex flex-row items-center"
+                >
+                  <Download className="w-5 h-5 mr-3 group-hover:animate-bounce" />
+                  Download CV
+                </a>
               </Button>
             </motion.div>
           </motion.div>

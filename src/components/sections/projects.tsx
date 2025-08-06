@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import {
   ExternalLink,
   Github,
@@ -20,26 +21,6 @@ const categories = [
     id: "web-app",
     label: "Web Apps",
     count: projects.filter((p) => p.category === "web-app").length,
-  },
-  {
-    id: "ui-ux",
-    label: "UI/UX",
-    count: projects.filter((p) => p.category === "ui-ux").length,
-  },
-  {
-    id: "tool",
-    label: "Tools",
-    count: projects.filter((p) => p.category === "tool").length,
-  },
-  {
-    id: "mobile",
-    label: "Mobile",
-    count: projects.filter((p) => p.category === "mobile").length,
-  },
-  {
-    id: "concept",
-    label: "Concepts",
-    count: projects.filter((p) => p.category === "concept").length,
   },
 ];
 
@@ -79,9 +60,11 @@ export function Projects() {
             Featured Projects
           </h2>
           <p className="text-xl text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto leading-relaxed">
-            A showcase of my work including e-commerce solutions, design
-            systems, and innovative concepts. While I work on confidential
-            projects at Zid, these demonstrate my skills and approach.
+            A showcase of collaborative projects where I served as a main
+            contributor, including e-commerce solutions, design systems, and
+            innovative concepts. While I work on confidential projects at Zid,
+            these highlight my contributions and technical approach in team
+            environments.
           </p>
         </motion.div>
 
@@ -150,22 +133,28 @@ export function Projects() {
                     {project.year}
                   </div>
 
-                  {/* Animated Tech Stack */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="grid grid-cols-3 gap-4 opacity-20 group-hover:opacity-40 transition-opacity duration-300">
-                      {project.technologies.slice(0, 6).map((tech, i) => (
-                        <motion.div
-                          key={tech}
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
-                          transition={{ delay: i * 0.1 }}
-                          className="w-8 h-8 bg-primary-600/20 rounded-lg flex items-center justify-center text-xs font-mono text-primary-700 dark:text-primary-300"
-                        >
-                          {tech.slice(0, 2)}
-                        </motion.div>
-                      ))}
+                  {/* Project Media */}
+                  {project.videos && project.videos.length > 0 ? (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <video
+                        src={project.videos[0]}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-300"
+                      />
                     </div>
-                  </div>
+                  ) : project.images && project.images.length > 0 ? (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Image
+                        src={project.images[0]}
+                        alt={`${project.title} preview`}
+                        fill
+                        className="object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-300"
+                      />
+                    </div>
+                  ) : null}
                 </div>
 
                 {/* Project Content */}
@@ -238,7 +227,11 @@ export function Projects() {
           </p>
           <Button
             size="lg"
-            className="bg-primary-600 hover:bg-primary-700 text-white"
+            className="bg-primary-600 hover:bg-primary-700 text-white cursor-pointer"
+            onClick={() => {
+              const contactSection = document.getElementById("contact");
+              contactSection?.scrollIntoView({ behavior: "smooth" });
+            }}
           >
             Let&apos;s Connect
           </Button>

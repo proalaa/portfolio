@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 export interface Project {
   id: string;
   title: string;
@@ -7,13 +8,14 @@ export interface Project {
   category: "web-app" | "mobile" | "ui-ux" | "tool" | "concept";
   status: "completed" | "in-progress" | "concept";
   featured: boolean;
-  images: string[];
+  images: (string | StaticImageData)[];
+  videos?: string[];
   demoUrl?: string;
   githubUrl?: string;
   challenges: string[];
   solutions: string[];
   impact: string[];
-  year: number;
+  year?: number;
 }
 
 export const projects: Project[] = [
@@ -37,10 +39,8 @@ export const projects: Project[] = [
     category: "web-app",
     status: "completed",
     featured: true,
-    images: [
-      "/projects/merchant-dashboard-1.jpg",
-      "/projects/merchant-dashboard-2.jpg",
-    ],
+    images: [],
+    videos: ["/videos/zid-vid.webm"],
     challenges: [
       "Managing complex state across multiple dashboard modules",
       "Implementing real-time data updates for merchant analytics",
@@ -81,7 +81,8 @@ export const projects: Project[] = [
     category: "web-app",
     status: "completed",
     featured: false,
-    images: ["/projects/catalog-1.jpg", "/projects/catalog-2.jpg"],
+    images: [],
+    videos: ["/videos/zid-vid.webm"],
     challenges: [
       "Implementing features to enhance charitable donation display",
       "Integrating ZAD project features into existing storefront",
@@ -119,7 +120,8 @@ export const projects: Project[] = [
     category: "web-app",
     status: "completed",
     featured: false,
-    images: ["/projects/ngo-platform-1.jpg", "/projects/ngo-platform-2.jpg"],
+    images: [],
+    videos: ["/videos/ngo-vid.webm"],
     demoUrl: "https://ngo.zid.sa",
     challenges: [
       "Customizing existing zidmall platform for charitable purposes",
@@ -140,6 +142,47 @@ export const projects: Project[] = [
       "Provided charitable organizations with additional visibility and reach",
     ],
     year: 2024,
+  },
+  {
+    id: "national-day-mall",
+    title: "National Day Mall (Saudi National Day 92)",
+    description:
+      "Special e-commerce platform showcasing products and offers from various stores in celebration of Saudi National Day 91.",
+    longDescription:
+      "As the lead developer, I customized and developed a specialized platform for Saudi National Day 91 celebrations. This platform is a fork of the existing zidmall project, established to showcase products and special offers from various stores during the 91st Saudi National Day. The platform serves as a centralized hub where customers can discover and access special National Day offers and products from participating stores.",
+    technologies: [
+      "Laravel",
+      "Laravel Blade",
+      "MySQL",
+      "Bootstrap",
+      "PHP",
+      "Jira",
+    ],
+    category: "web-app",
+    status: "completed",
+    featured: false,
+    images: [],
+    videos: ["/videos/nd-mall-vid.webm"],
+    challenges: [
+      "Customizing existing zidmall platform for National Day celebrations",
+      "Implementing proper redirection to original store offers",
+      "Creating festive and patriotic design theme for Saudi National Day",
+      "Coordinating with multiple stores for special offers display",
+    ],
+    solutions: [
+      "Forked and customized existing zidmall project for National Day use case",
+      "Implemented clean redirection system to original store offers",
+      "Built festive interface with Saudi National Day branding and themes",
+      "Used Laravel Blade for server-side rendering and Bootstrap for responsive design",
+      "Used Jira for project management and stakeholder coordination",
+    ],
+    impact: [
+      "Created centralized platform for discovering National Day offers and products",
+      "Enhanced visibility for participating stores during national celebrations",
+      "Provided customers with easy access to special National Day deals",
+      "Contributed to national celebration through digital commerce platform",
+    ],
+    year: 2022,
   },
   {
     id: "hermes-platform",
@@ -164,7 +207,8 @@ export const projects: Project[] = [
     category: "web-app",
     status: "in-progress",
     featured: true,
-    images: ["/projects/hermes-1.jpg", "/projects/hermes-2.jpg"],
+    images: [],
+    videos: ["/videos/zid-vid.webm"],
     challenges: [
       "Reducing codebase complexity while maintaining feature parity",
       "Implementing strict TypeScript typings and linting rules",
@@ -214,7 +258,8 @@ export const projects: Project[] = [
     category: "web-app",
     status: "completed",
     featured: true,
-    images: ["/projects/mazeed-1.jpg", "/projects/mazeed-2.jpg"],
+    images: [],
+    videos: ["/videos/mazeed-vid.webm"],
     demoUrl: "https://mazeed.sa",
     challenges: [
       "Building a complete e-commerce platform from scratch",
@@ -234,7 +279,7 @@ export const projects: Project[] = [
       "Delivered high-quality user experience and performance",
       "Established solid foundation for platform growth and scaling",
     ],
-    year: 2024,
+    year: 2023,
   },
 ];
 
