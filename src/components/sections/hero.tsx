@@ -259,7 +259,7 @@ export function Hero() {
               <Button
                 size="lg"
                 onClick={() => scrollToSection("projects")}
-                className="group relative overflow-hidden px-8 py-4 text-lg font-semibold"
+                className="group relative overflow-hidden px-8 py-4 text-lg font-semibold cursor-pointer"
               >
                 <motion.span className="relative z-10 flex items-center gap-3">
                   View My Work
@@ -289,7 +289,7 @@ export function Hero() {
                 variant="outline"
                 size="lg"
                 onClick={() => scrollToSection("contact")}
-                className="group px-8 py-4 text-lg font-semibold border-2"
+                className="group px-8 py-4 text-lg font-semibold border-2 cursor-pointer"
               >
                 <MessageCircle className="w-5 h-5 mr-3 group-hover:animate-bounce" />
                 Get In Touch

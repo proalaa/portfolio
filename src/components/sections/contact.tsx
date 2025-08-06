@@ -367,10 +367,29 @@ export function Contact() {
             <Button
               size="lg"
               className="bg-primary-600 hover:bg-primary-700 text-white"
+              onClick={() => {
+                // You can replace this with your actual calendar booking link (Calendly, etc.)
+                window.open(
+                  "https://calendly.com/alaa4455/new-meeting",
+                  "_blank"
+                );
+              }}
             >
               Schedule a Call
             </Button>
-            <Button size="lg" variant="outline">
+            <Button
+              size="lg"
+              variant="outline"
+              onClick={() => {
+                const projectsSection = document.getElementById("projects");
+                if (projectsSection) {
+                  projectsSection.scrollIntoView({ behavior: "smooth" });
+                } else {
+                  // Fallback: scroll to top where projects section should be
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
+            >
               View My Work
             </Button>
           </div>

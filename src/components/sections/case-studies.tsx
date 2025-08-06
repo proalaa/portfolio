@@ -368,7 +368,15 @@ export function CaseStudies() {
             </Button>
             <Button size="lg" variant="outline">
               <ChevronRight className="w-4 h-4 mr-2" />
-              View My Resume
+              <a
+                href="/Alaa_AldeenAlHaddad_Resume.pdf"
+                download="Alaa_AldeenAlHaddad_Resume.pdf"
+                aria-label="Download Alaa Aldeen Al Haddad's Resume (PDF)"
+                title="Download my resume as PDF"
+                className="flex flex-row items-center"
+              >
+                View my resume
+              </a>
             </Button>
           </div>
         </motion.div>
